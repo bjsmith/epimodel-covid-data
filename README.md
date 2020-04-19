@@ -6,18 +6,19 @@ While the data can be useful as is, the library and toolkit to use it is [epimod
 
 All data files (mostly CSV and HDF5) are indexed by region Code (ISOalpha2 code for countries, ISO 3166-2 for country subdivisions, see the main repo readme for details).
 
+**NOTE 2020-04-6:** There has been renaming of the files to be more understandable, apologies for any inconvenience.
+
 ## Common data
 
-* `regions.csv` - Common region set used by epimodel.
-* `CSSE.csv` - John hopkins data, recoded from CSSE github
+* `regions.csv` - Common region set used by epimodel
+* `regions-gleam.csv` - Additional regions with the GLEAM basins (only useful for GLEAM) (Skipped: country Norther Cyprus with city Ercan, country Kosovo with city Pristina) (Note: the populations may be missing or wrong, esp. for small regions!)
 
-### EpidemicForecasting.org countermeasure DB
+### Updated
 
-* `CMS-binary.csv` - Selected binary counter-measure features
-* `CMS-0to1.csv` - Selected binary or gradual 0-1 features
-* `CMS-simplified.csv` - More selected features (wrong/column format now!)
+* `foretold.csv` - Infected estimates from Foretold predictions
+* `johns-hopkins.csv` - John hopkins data, recoded from CSSE github
 
-## Notes: Other data sources
+### Static (or seldom updated)
 
 * `timezones.csv` - Countries (by ISO alpha-2 code) and their timezones
 * `rates.csv` - Countries (by ISO alpha-2 code) and the following based on demographic data from the UN and doi:10.1101/2020.03.09.20033357 
@@ -26,11 +27,27 @@ All data files (mostly CSV and HDF5) are indexed by region Code (ISOalpha2 code 
     `CaseFatalityRate` fraction of COVID-19 infected that would die (IFR or infection fatality rate in the paper)
 * `verity_et_al_rates.csv` - Various rates from doi:10.1101/2020.03.09.20033357
 * `age_dist_un.csv` - UN Age distribution for various regions, estimated absolute numbers from https://population.un.org/wpp/
+* `estimated-infectious.csv` - The historical estimations done during the testing. (Countries sorted by ISO aplha-2 code)
+* `hospital-capacity.csv` - The capacity of hospital beds counted per 100k citizens with capacity of new infectionus per
+  day per 1000 citizens. Year and source URL attached. (Countries sorted by aplha-2 code)
+* `max_percentage_of_infected_population_for_enough_icu.csv` - The maximal percentage of the infected the infected
+  population for enaugh ICU beds. 
 
-### Used
 
-* Jogn Hopkins CSSE github
-* Package `pycountries`
+## EpidemicForecasting.org countermeasure DB
+
+### Direct conversion from notion.se CSVs, updated
+
+* `countermeasures-features.csv` - 24 selected features
+* `countermeasures-model-0to1.csv` - 9 gradual featureg (pre-processed, early selection for modeling)
+
+### Not updated
+
+* `countermeasures-selected-binary.csv` - 16 selected binary features (not updated)
+* `countermeasures-model-0to1-split.csv` - Split of `countermeasures-model-0to1.csv` into binary flags (for CM strength modeling). All degrees of a feature up to current level are active.
+* `countermeasures-model-0to1-split_exclusive.csv` - Same as above, only the current degree of every multi-level feature is active.
+
+## Notes: Other data sources
 
 ### For reference
 
