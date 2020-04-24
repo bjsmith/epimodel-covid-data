@@ -1,23 +1,27 @@
-ef_tag,ef_quantity,ACAPS,confidence,Notes
-blanket curfew - no symptoms,2,Curfews,50,
-blanket curfew - no symptoms,2,Partial lockdown,60,
-blanket curfew - no symptoms,3,Full lockdown,80,
-domestic travel limitation,1,Checkpoints within the country,80,
-"domestic travel limitation, domestic traveller quarantine, domestic travel ban",2,Domestic travel restrictions,50,ACAPS translates into different ef categories here
-International traveller screening - risk countries,1.5,Health screenings in airports and border crossings,70,
-International traveller screening - risk countries,1.5,Additional health/documents requirements upon arrival,70,
-International travel ban - risk countries,5,Visa restrictions,40,
-International travel ban - risk countries,5.5,Border closure,60,
-International travel ban - all countries,6,Complete border closure,90,
-hospital specialisation - partial,1,Strengthening the public health system,50,This means lots of things but the closest ef tag has been chosen
-coronavirus education activities,1,Awareness campaigns,60,
-risk communication,1,General recommendations,60,Often travel recommendations or social distancing
-funeral hygiene,1,Amendments to funeral and burial regulations,90,
-limited nonessential business closure,1,Public services closure,50,
-school closure,1,School closure,50,
-test all,1,Mass population testing,90,
-military takeover,1,Military deployment,90,
-state of emergency,1,State of emergency declared,90,
-economic stimulus,1,Economic measures,80,
-public mask wearing data,61,Requirement to wear protective gear in public,,
-gatherings banned,100,Limit public gatherings,,
+ef_tag,ef_quantity,ACAPS,search_string,confidence,Notes,Amended
+blanket curfew - no symptoms,2,Curfews,,50,,Y
+blanket curfew - no symptoms,2,Partial lockdown,,60,,Y
+blanket curfew - no symptoms,3,Full lockdown,,80,,Y
+domestic travel limitation,1,Checkpoints within the country,,80,,
+"domestic travel limitation, domestic traveller quarantine, domestic travel ban",2,Domestic travel restrictions,,50,ACAPS translates into different ef categories here,requires fix to numeric values
+International traveller screening - risk countries,1.5,Health screenings in airports and border crossings,,70,,
+International traveller screening - risk countries,1.5,Additional health/documents requirements upon arrival,,70,,
+International travel ban - risk countries,5,Visa restrictions,,40,,
+International travel ban - risk countries,5.5,Border closure,,60,,
+International travel ban - all countries,6,Complete border closure,,90,,
+hospital specialisation,1,Strengthening the public health system,,50,This means lots of things but the closest ef tag has been chosen,Y
+coronavirus education activities,1,Awareness campaigns,,60,,
+risk communication,1,General recommendations,,60,Often travel recommendations or social distancing,
+funeral hygiene,1,Amendments to funeral and burial regulations,,90,,
+limited nonessential business closure,1,Public services closure,,50,,
+school closure,1,Schools closure,,50,,Y
+test all,1,Mass population testing,,90,,
+military takeover,1,Military deployment,,90,,
+state of emergency,1,State of emergency declared,,90,,
+economic stimulus,1,Economic measures,,80,,
+public mask wearing data,61,Requirement to wear protective gear in public,,,,
+public mask wearing data,61,General recommendations,use.*mask,,,
+public mask wearing data,61,General recommendations,wear.*mask,,,
+indoor gatherings banned,100,Limit public gatherings,,,"not really just ""indoor gatherings banned""; did this to fit within the existing converter",Y
+limited nonessential business suspension,0.5,General recommendations,((business|workplace|office).*close),,,Y
+cultural activity limitation,,Amendments to funeral and burial regulations,,,,
